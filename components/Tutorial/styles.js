@@ -6,7 +6,7 @@ export const Background = styled.div.attrs({
   background-color: #ED3637;
 `;
 
-export const Description = styled.div.attrs({
+export const Description = styled.p.attrs({
   className: 'text-lg text-center text-white'
 })``;
 

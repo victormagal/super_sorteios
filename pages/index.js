@@ -6,20 +6,20 @@ import Tutorial from '../components/Tutorial';
 
 export default function Home() {
   const onSubmit = (values, actions) => {
-    // console.log(values);
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(values)
-    }).then((res) => {
-      console.log('Response received');
-      if (res.status === 200) {
-        console.log('Response secceeded');
-      }
-    })
+    console.log(values);
+    // fetch('/api/contact', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json, text/plain, */*',
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(values)
+    // }).then((res) => {
+    //   console.log('Response received');
+    //   if (res.status === 200) {
+    //     console.log('Response secceeded');
+    //   }
+    // })
   }
 
   return (
@@ -35,13 +35,28 @@ export default function Home() {
         <Formik
           initialValues={{
             name: '',
-            message: ''
+            email: '',
+            message: '',
+            checked: [],
           }}
           onSubmit={onSubmit}
           validationSchema={saleSchema}
         >
-          {({ errors, handleChange, values }) => (
+          {({ handleChange, values }) => (
             <Form>
+              <fieldset>
+                <ul className='flex flex-wrap' role='group' aria-labelledby='checkbox-group'>
+                  <li className='block cursor-pointer h-8 relative w-1/24'>
+                    <Field
+                      className='absolute h-full invisible w-full z-10'
+                      type='checkbox'
+                      name='checked'
+                      value='001'
+                    />
+                    <span className='absolute bg-black h-full left-0 rounded text-center text-white text-2xl top-0 w-full z-0'>001</span>
+                  </li>
+                </ul>
+              </fieldset>
               <fieldset>
                 <ul>
                   <li>
@@ -52,6 +67,16 @@ export default function Home() {
                       placeholder='Nome completo'
                       onChange={handleChange}
                       value={values.name}
+                    />
+                  </li>
+                  <li>
+                    <Field 
+                      type='email'
+                      id='email'
+                      name='email'
+                      placeholder='Seu email'
+                      onChange={handleChange}
+                      value={values.email}
                     />
                   </li>
                   <li>
