@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Background = styled.div.attrs({
   className: 'py-24'
 })`
-  background-color: #ED3637;
+  background-color: #E85F5C;
 `;
 
 export const Description = styled.p.attrs({
