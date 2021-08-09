@@ -399,8 +399,4 @@ export const numbers = [
     status: 'available',
     value: '099',
   },
-  {
-    status: 'available',
-    value: '100',
-  },
 ];
