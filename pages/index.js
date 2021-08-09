@@ -14,20 +14,6 @@ export default function Home() {
     let message = encodeURIComponent(`Me chamo ${values.name}.\nMeu telefone para contato é ${values.phone} e meu email, ${values.email}.\nOs números que escolhi são: ${values.numbers}.`);
     let url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     router.push(url);
-    // console.log(values);
-    // fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Accept': 'application/json, text/plain, */*',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(values)
-    // }).then((res) => {
-    //   console.log('Response received');
-    //   if (res.status === 200) {
-    //     console.log('Response secceeded');
-    //   }
-    // })
   }
 
   return (

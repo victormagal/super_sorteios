@@ -5,7 +5,7 @@ import { Background } from './styles';
 export default function Header() {
   return (
     <Background>
-      <Container className='items-center py-24'>
+      <Container className='items-center'>
         <div className='col-span-6'>
           <img src='/logo.png' alt='Super Sorteios' />
         </div>
