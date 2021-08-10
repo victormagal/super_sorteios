@@ -1,6 +1,7 @@
 import router from 'next/router';
 import Head from 'next/head';
 import { Field, Form, Formik } from 'formik';
+import InputMask from 'react-input-mask';
 import { numbers } from '../helpers/numbers';
 import { saleSchema } from '../helpers/schemas';
 import GlobalStyle from '../styles/global';
@@ -86,12 +87,13 @@ export default function Home() {
                     <p className='text-sm text-red-500'>{errors.email}</p>
                   </li>
                   <li className='mb-4'>
-                    <Field
+                    <InputMask
                       className='px-2 py-1 rounded text-lg w-full'
                       type='text'
+                      mask='(99) 99999-9999'
                       id='phone'
                       name='phone'
-                      placeholder='(XX)XXXXX-XXXX'
+                      placeholder='(XX) XXXXX-XXXX'
                       onChange={handleChange}
                       value={values.phone}
                     />
