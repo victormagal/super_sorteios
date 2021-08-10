@@ -1,10 +1,10 @@
 export const numbers = [
   {
-    status: 'reserved',
+    status: 'available',
     value: '000',
   },
   {
-    status: 'paid',
+    status: 'available',
     value: '001',
   },
   {

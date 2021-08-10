@@ -10,17 +10,17 @@ export default function Tutorial() {
         <Step>
           <TicketIcon width={100} height={100} className='text-white' />
           <Subtitle>Escolha seus números</Subtitle>
-          <Description>Escolha seus números da sorte. Você pode escolher quantos desejar.</Description>
+          <Description>Selecione quantos números desejar e faça sua reserva pelo nosso formulário de contato.</Description>
         </Step>
         <Step>
           <CreditCardIcon width={100} height={100} className='text-white' />
-          <Subtitle>Faça o pagamento</Subtitle>
-          <Description>Escolha uma forma de pagamento.</Description>
+          <Subtitle>Reserva/Pagamento</Subtitle>
+          <Description>Após efetuar sua reserva, entraremos em contato. Confirme a forma de pagamento (PicPay ou PIX) que preferir.</Description>
         </Step>
         <Step>
           <CurrencyDollarIcon width={100} height={100} className='text-white' />
           <Subtitle>Pronto!</Subtitle>
-          <Description>Aguarde a confirmação de seu número e boa sorte!</Description>
+          <Description>Com seu(s) número(s) em mãos, aguarde o sorteio e boa sorte!</Description>
         </Step>
       </Container>
     </Background>

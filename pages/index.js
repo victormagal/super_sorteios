@@ -1,14 +1,17 @@
-import router, { useRouter } from 'next/router';
+import router from 'next/router';
 import Head from 'next/head';
 import { Field, Form, Formik } from 'formik';
-import { saleSchema } from '../helpers/schemas';
-import Header from '../components/Header';
-import Tutorial from '../components/Tutorial';
-import GlobalStyle from '../styles/global';
-
 import { numbers } from '../helpers/numbers';
+import { saleSchema } from '../helpers/schemas';
+import GlobalStyle from '../styles/global';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Labels from '../components/Labels';
+import Number from '../components/number';
+import Regulation from '../components/regulation';
+import Tutorial from '../components/Tutorial';
 
-import Number from '../components/Number';
+
 
 export default function Home() {
   const onSubmit = (values) => {
@@ -29,6 +32,7 @@ export default function Home() {
       <main>
         <Header />
         <Tutorial />
+        <Labels />
         <Formik
           initialValues={{
             email: '',
@@ -56,7 +60,7 @@ export default function Home() {
                 </ul>
               </fieldset>
               <fieldset className='lg:container lg:mx-auto grid grid-cols-12 gap-4'>
-                <ul className='col-span-4 col-start-5 py-8'>
+                <ul className='col-span-4 col-start-5 pt-6'>
                   <li className='mb-4'>
                     <Field
                       className='px-2 py-1 rounded text-lg w-full'
@@ -101,6 +105,8 @@ export default function Home() {
             </Form>
           )}
         </Formik>
+        <Regulation />
+        <Footer />
       </main>
     </>
   )
