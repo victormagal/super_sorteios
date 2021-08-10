@@ -23,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
         background-color: #00A676;
         color: black;
       }
+      &.active {
+        background-color: #333333 !important;
+        color: #FDFFFC !important;
+      }
     }
     &:hover {
       span {

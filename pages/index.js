@@ -8,10 +8,12 @@ import GlobalStyle from '../styles/global';
 
 import { numbers } from '../helpers/numbers';
 
+import Number from '../components/Number';
+
 export default function Home() {
   const onSubmit = (values) => {
     let phoneNumber = '5561996865174';
-    let message = encodeURIComponent(`Me chamo ${values.name}.\nMeu telefone para contato é ${values.phone} e meu email, ${values.email}.\nOs números que escolhi são: ${values.numbers}.`);
+    let message = encodeURIComponent(`Me chamo ${values.name}.\n\nMeu telefone para contato é ${values.phone} e meu email, ${values.email}.\n\nOs números que escolhi são: ${values.numbers}.`);
     let url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     router.push(url);
   }
@@ -29,10 +31,10 @@ export default function Home() {
         <Tutorial />
         <Formik
           initialValues={{
-            name: '',
             email: '',
-            phone: '',
+            name: '',
             numbers: [],
+            phone: '',
           }}
           onSubmit={onSubmit}
           validationSchema={saleSchema}
@@ -43,16 +45,11 @@ export default function Home() {
                 <ul className='lg:container lg:mx-auto flex flex-wrap justify-center' role='group' aria-labelledby='checkbox-group'>
                   {numbers.map((number, index) => (
                     <li key={index} className='block h-8 mb-2 mx-1 relative w-1/24'>
-                      {number.status === 'available' &&
-                        <Field
-                          className='absolute cursor-pointer h-full opacity-0 w-full z-10' 
-                          type='checkbox'
-                          name='numbers'
-                          onChange={handleChange}
-                          value={number.value}
-                        />
-                      }
-                      <span className={`absolute ${number.status} h-full left-0 rounded text-center text-2xl top-0 w-full z-0`}>{number.value}</span>
+                      <Number
+                        handleChange={handleChange}
+                        status={number.status}
+                        value={number.value}
+                      />
                     </li>
                   ))}
                   <p className='text-sm text-red-500'>{errors.numbers}</p>
