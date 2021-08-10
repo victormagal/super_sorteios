@@ -11,7 +11,7 @@ export const Description = styled.p.attrs({
 })``;
 
 export const Step = styled.div.attrs({
-  className: 'col-span-4 flex flex-col items-center'
+  className: 'col-span-4 flex flex-col items-center px-4'
 })``;
 
 export const Subtitle = styled.h2.attrs({
@@ -19,5 +19,5 @@ export const Subtitle = styled.h2.attrs({
 })``;
 
 export const Title = styled.h1.attrs({
-  className: 'col-span-12 font-black mb-12 text-5xl text-center text-white uppercase'
+  className: 'lg:col-span-12 col-span-4 font-black mb-12 text-5xl text-center text-white uppercase'
 })``;

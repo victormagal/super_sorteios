@@ -23,7 +23,7 @@ export default function Number({ handleChange, status, value }) {
           onChange={handleChange}
         />
       }
-      <span className={`absolute ${active} h-full left-0 rounded text-center text-2xl top-0 w-full z-0`}>{value}</span>
+      <span className={`absolute ${active} h-full left-0 rounded text-center lg:text-2xl text-base top-0 w-full z-0`}>{value}</span>
     </>
   );
 }

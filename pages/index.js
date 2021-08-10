@@ -49,7 +49,7 @@ export default function Home() {
               <fieldset>
                 <ul className='lg:container lg:mx-auto flex flex-wrap justify-center' role='group' aria-labelledby='checkbox-group'>
                   {numbers.map((number, index) => (
-                    <li key={index} className='block h-8 mb-2 mx-1 relative w-1/24'>
+                    <li key={index} className='block lg:h-8 h-6 mb-2 mx-1 relative lg:w-1/24 w-1.5/12'>
                       <Number
                         handleChange={handleChange}
                         status={number.status}
@@ -57,11 +57,11 @@ export default function Home() {
                       />
                     </li>
                   ))}
-                  <p className='text-sm text-red-500'>{errors.numbers}</p>
+                  <p className='text-sm text-center text-red-500 w-full'>{errors.numbers}</p>
                 </ul>
               </fieldset>
-              <fieldset className='lg:container lg:mx-auto grid grid-cols-12 gap-4'>
-                <ul className='col-span-4 col-start-5 pt-6'>
+              <fieldset className='lg:container lg:mx-auto grid lg:grid-cols-12 grid-cols-4 gap-4'>
+                <ul className='col-span-4 lg:col-start-5 pt-6 lg:px-0 px-4'>
                   <li className='mb-4'>
                     <Field
                       className='px-2 py-1 rounded text-lg w-full'
@@ -100,7 +100,7 @@ export default function Home() {
                     <p className='text-sm text-red-500'>{errors.phone}</p>
                   </li>
                   <li className='flex justify-end'>
-                    <button className='px-8 py-1 rounded text-lg text-white' type='submit'>Enviar</button>
+                    <button className='py-1 rounded text-lg text-white lg:w-2/6 w-full' type='submit'>Enviar</button>
                   </li>
                 </ul>
               </fieldset>
