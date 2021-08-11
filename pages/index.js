@@ -16,7 +16,7 @@ import Tutorial from '../components/Tutorial';
 
 export default function Home() {
   const onSubmit = (values) => {
-    let phoneNumber = '5561996865174';
+    let phoneNumber = '5561996108176';
     let message = encodeURIComponent(`Me chamo ${values.name}.\n\nMeu telefone para contato é ${values.phone} e meu email, ${values.email}.\n\nOs números que escolhi são: ${values.numbers}.`);
     let url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     router.push(url);
