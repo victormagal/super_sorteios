@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Labels from '../components/Labels';
 import Number from '../components/number';
-import Regulation from '../components/regulation';
+import Rules from '../components/rules';
 import Tutorial from '../components/Tutorial';
 
 
@@ -107,7 +107,7 @@ export default function Home() {
             </Form>
           )}
         </Formik>
-        <Regulation />
+        <Rules />
         <Footer />
       </main>
     </>
